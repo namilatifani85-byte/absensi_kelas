@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+
+@theme {
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+    /* Token Warna Fondasi design.md */
+    --color-canvas: #F4F5FA;
+    --color-surface-card: #FFFFFF;
+    --color-surface-dark: #121624;
+    --color-text-primary: #0F172A;
+    --color-text-muted: #475569;
+    --color-border-subtle: #E2E8F0;
+    --color-focus-ring: #2563EB;
+
+    /* Token Semantik Status Kehadiran (WCAG 2.1 AAA Compliant) */
+    --color-present-bg: #E8F7F0;
+    --color-present-text: #065F46;
+
+    --color-permit-bg: #FDEEE9;
+    --color-permit-text: #9A3412;
+
+    --color-sick-bg: #EBF3FC;
+    --color-sick-text: #1E40AF;
+
+    --color-absent-bg: #FEE2E2;
+    --color-absent-text: #991B1B;
+}
+
+/* Custom CSS Helpers untuk Status Presensi Terkalibrasi WCAG AAA */
+.badge-present {
+    background-color: #E8F7F0 !important;
+    color: #065F46 !important;
+}
+.badge-permit {
+    background-color: #FDEEE9 !important;
+    color: #9A3412 !important;
+}
+.badge-sick {
+    background-color: #EBF3FC !important;
+    color: #1E40AF !important;
+}
+.badge-absent {
+    background-color: #FEE2E2 !important;
+    color: #991B1B !important;
+}
